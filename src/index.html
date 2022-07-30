@@ -7,11 +7,9 @@
   <div class="site-container">
     @include('partials/header.html')
     <main class="main">
-      <picture>
-        <source srcset="img/cover.avif" type="image/avif">
-        <source srcset="img/cover.webp" type="image/webp">
-        <img loading="lazy" src="img/cover.jpg" class="image" width="300" height="300" alt="Обложка канала MaxGraph">
-      </picture>
+      <div class="main__block">
+        <h3>Main Block</h3>
+      </div>
     </main>
 
     @include('partials/footer.html')
