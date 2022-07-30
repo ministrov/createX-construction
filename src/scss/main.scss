@@ -8,15 +8,4 @@
 @import "./components/header";
 
 // тестовые стили, удалите их
-.page__body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: var(--vh);
-}
 
-.main__block {
-  max-width: 500px;
-  padding: 40px;
-  border: 2px solid teal;
-}
