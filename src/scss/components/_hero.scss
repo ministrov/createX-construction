@@ -10,4 +10,12 @@
   &__content {
     max-width: 590px;
   }
+
+  &__btns {
+    .btn {
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+    }
+  }
 }
