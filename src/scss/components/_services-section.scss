@@ -1,6 +1,63 @@
 .services-section {
+  padding-bottom: 50px;
   background-image: url("../img/services-bg.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.services-item {
+  display: block;
+  padding-top: 90px;
+  padding-bottom: 90px;
+  padding-left: 80px;
+  padding-right: 80px;
+  position: relative;
+  border: 1px solid #E5E8ED;
+  border-radius: 4px;
+  box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08),
+  0px 30px 24px -10px rgba(154, 156, 165, 0.05),
+  0px 12px 10px -6px rgba(154, 156, 165, 0.04),
+  0px 4px 4px -4px rgba(30, 33, 44, 0.03);
+  background-color: var(--color-light);
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-image: url("../img/services-1.jpg");
+    background-repeat: no-repeat;
+  }
+
+  &__content {
+    @include flex-column-center;
+
+    position: relative;
+    z-index: 10;
+  }
+
+  &__icon {
+    width: 52px;
+    height: 52px;
+    margin-bottom: 23px;
+    object-fit: cover;
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 150%;
+    text-align: center;
+    color: var(--color-ebony);
+  }
 }
