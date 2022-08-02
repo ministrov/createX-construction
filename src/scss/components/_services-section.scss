@@ -1,9 +1,27 @@
 .services-section {
-  padding-bottom: 50px;
+  padding-top: 212px;
+  padding-bottom: 80px;
   background-image: url("../img/services-bg.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  &__list {
+    margin-bottom: 80px;
+  }
+
+  &__learn {
+    @include flex-all-center;
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-right: 40px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 150%;
+    color: var(--color-ebony);
+  }
 }
 
 .services-list {
