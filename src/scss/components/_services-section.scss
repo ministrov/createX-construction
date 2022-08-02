@@ -8,14 +8,14 @@
 
 .services-list {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 285px);
   gap: 30px;
 }
 
 .services-item {
   display: block;
-  padding-top: 90px;
-  padding-bottom: 90px;
+  padding-top: 87px;
+  padding-bottom: 91px;
   padding-left: 80px;
   padding-right: 80px;
   position: relative;
