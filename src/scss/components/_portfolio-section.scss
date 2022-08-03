@@ -19,6 +19,26 @@
   &__slider-nav {
     transform: translateX(12px);
   }
+
+  &__learn {
+    margin-top: 80px;
+  }
+
+  &__items {
+    margin: -100px;
+    padding: 100px;
+  }
+
+  .swiper-slide {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  }
+
+  .slider-visible {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 .portfolio-item {
@@ -36,7 +56,7 @@
     @include flex-column-center;
 
     padding-top: 16px;
-    padding-bottom: 16px;
+    padding-bottom: 23px;
     padding-left: 10px;
     padding-right: 10px;
   }
@@ -72,4 +92,9 @@
     border: 1px solid currentColor;
     border-radius: 4px;
   }
+}
+
+.slider-nav__btn.swiper-button-disabled {
+  opacity: 0.4;
+  pointer-events: none;
 }
