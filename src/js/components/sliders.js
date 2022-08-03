@@ -49,3 +49,13 @@ portfolioSlider.on('slideChange', function () {
     el.classList.remove('slider-visible');
   })
 });
+
+const testimonialsSlider = new Swiper('.testimonials__items', {
+  slidesPerView: 1,
+  spaceBetween: gap,
+  loop: true,
+  navigation: {
+    nextEl: '.testimonials__next',
+    prevEl: '.testimonials__prev'
+  },
+});
