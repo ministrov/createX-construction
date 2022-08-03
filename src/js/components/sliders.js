@@ -1,8 +1,11 @@
 import Swiper from 'swiper';
 
+const bodyStyle = window.getComputedStyle(document.body);
+const gap = parseInt(bodyStyle.getPropertyValue('--grid-gap'));
+
 const swiper = new Swiper('.swiper', {
   slidesPerView: 3,
-  spaceBetween: 30,
+  spaceBetween: gap,
   loop: true,
   navigation: {
     nextEl: '.portfolio-section__next',
@@ -10,4 +13,4 @@ const swiper = new Swiper('.swiper', {
   },
 });
 
-console.log(swiper)
+console.log(gap, swiper);

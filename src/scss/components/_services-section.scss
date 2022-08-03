@@ -27,7 +27,7 @@
 .services-list {
   display: grid;
   grid-template-columns: repeat(4, 285px);
-  gap: 30px;
+  gap: var(--grid-gap);
 }
 
 .services-item {
