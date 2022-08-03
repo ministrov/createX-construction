@@ -1,6 +1,8 @@
 .slider-nav {
-  display: grid;
-  grid-template-columns: repeat(2, 48px);
+  position: relative;
+  z-index: 15;
+
+  @include flex-v-center;
 
   &__btn {
     @include flex-all-center;
