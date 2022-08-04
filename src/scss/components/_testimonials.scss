@@ -1,6 +1,5 @@
 .testimonials {
   padding-top: 97px;
-  padding-bottom: 97px;
   padding-left: 0;
   padding-right: 0;
   background-color: #F4F5F7;
@@ -13,6 +12,11 @@
 
   &__content {
     max-width: 612px;
+  }
+
+  &__image {
+    margin-bottom: -60px;
+    border-radius: 4px;
   }
 
   &__title {
