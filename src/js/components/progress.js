@@ -1,7 +1,7 @@
-const circle = document.querySelectorAll('.progress');
+const circle = document.querySelector('.progress');
 
 const progressAnimation = () => {
-  let percentageProgress = Math.floor(scrollTop / (siteHeight - windowHeight) * 100);
+  let percentageProgress = Math.floor(70);
 
   let radius = circle.getAttribute('r');
   let circleLength = 2 * Math.PI * radius;
@@ -10,3 +10,4 @@ const progressAnimation = () => {
 };
 
 progressAnimation();
+

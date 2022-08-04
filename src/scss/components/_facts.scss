@@ -10,11 +10,20 @@
     margin: 0 auto;
     gap: 48px;
   }
+
+  &__title {
+    margin-bottom: 62px;
+  }
 }
 
 .facts-element {
   &__circle {
+    --progress-stroke: #000;
+    --progress-bg-opacity: 0.3;
     position: relative;
+    width: 148px;
+    height: 148px;
+    margin-bottom: 20px;
 
     svg {
       position: absolute;
@@ -23,5 +32,50 @@
       top: 0;
       bottom: 0;
     }
+
+    .progress {
+      stroke: var(--progress-stroke);
+      transform: rotate(-90deg) translateX(20px);
+      transform-origin: center;
+    }
+
+    .progress-bg {
+      stroke: var(--progress-stroke);
+      opacity: var(--progress-bg-opacity);
+    }
+
+    &--one-color {
+      --progress-stroke: #F89828;
+    }
+
+    &--two-color {
+      --progress-stroke: #F52F6E;
+    }
+
+    &--three-color {
+      --progress-stroke: #5A87FC;
+    }
+
+    &--four-color {
+      --progress-stroke: #03CEA4;
+    }
+  }
+
+  &__value {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 150%;
+    color: var(--color-ebony);
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 150%;
+    color: var(--color-ebony);
   }
 }
