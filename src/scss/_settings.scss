@@ -194,6 +194,49 @@ a {
     font-size: 14px;
     line-height: 150%;
     color: var(--color-gray);
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 1px;
+      left: -1px;
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      border: 1px solid var(--color-primary);
+      border-radius: 3px;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 1px;
+      left: -1px;
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      border: 1px solid var(--color-primary);
+      border-radius: 3px;
+      background-image: url("../img/check.svg");
+      background-position: center;
+      background-size: 10px 8px;
+      background-repeat: no-repeat;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+  }
+
+  &__input:checked + &__text::before {
+    background-color: var(--color-primary);
+  }
+
+  &__input:checked + &__text::after {
+    opacity: 1;
+  }
+
+  &__input:focus + &__text {
+    outline: 3px solid var(--color-primary);
   }
 }
 

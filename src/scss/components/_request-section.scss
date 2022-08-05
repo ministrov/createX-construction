@@ -1,6 +1,6 @@
 .request-section {
   padding-top: 80px;
-  padding-bottom: 80px;
+  padding-bottom: 77px;
   background-image: url("../img/request-section-bg.jpg");
   background-color: var(--color-ebony);
   @include bg-cover;
@@ -44,5 +44,19 @@
 
   &__field {
     margin-bottom: 21px;
+  }
+
+  &__custom-checkbox {
+    margin-bottom: 22px;
+  }
+
+  &__btn {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 31px;
+    padding-right: 31px;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.5px;
   }
 }
