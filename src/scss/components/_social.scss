@@ -1,0 +1,44 @@
+.social {
+  display: flex;
+  // align-items: center;
+
+  &__item {
+    width: 24px;
+    height: 24px;
+
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+  }
+
+  &__link {
+    display: block;
+    width: 24px;
+    height: 24px;
+
+    &--whatsapp {
+      background-image: url("../img/what.png");
+      @include bg-cover;
+    }
+
+    &--messanger {
+      background-image: url("../img/messanger.png");
+      @include bg-cover;
+    }
+
+    &--facebook {
+      background-image: url("../img/facebook.png");
+      @include bg-cover;
+    }
+
+    &--twitter {
+      background-image: url("../img/twitter.png");
+      @include bg-cover;
+    }
+
+    &--youtube {
+      background-image: url("../img/youtube.png");
+      @include bg-cover;
+    }
+  }
+}

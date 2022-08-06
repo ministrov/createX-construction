@@ -1,3 +1,76 @@
 .footer {
-  background-color: red;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  padding-left: 0;
+  padding-right: 0;
+  color: rgba(255, 255, 255, 0.6);
+  background-color: var(--color-ebony);
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  &__left {
+    grid-column: 7 span;
+  }
+
+  &__logo {
+    margin-right: 60px;
+  }
+
+  &__left-top {
+    @include flex-v-center;
+
+    margin-bottom: 22px;
+  }
+
+  &__description {
+    margin: 0;
+    width: 100%;
+    max-width: 493px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: var(--color-light);
+  }
+
+  &__footer-form {
+    grid-column: 5 span;
+  }
+
+  &__footer-address {
+    grid-column: 4 span;
+  }
+
+  &__footer-nav {
+    grid-column: 8 span;
+  }
+
+  &__copyright {
+    grid-column: 12 span;
+  }
+}
+
+.footer-form {
+  &__title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 150%;
+    color: var(--color-light);
+  }
+
+  &__items {
+    @include flex-v-center;
+  }
+
+  &__btn {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 19px;
+    padding-right: 19px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
 }
