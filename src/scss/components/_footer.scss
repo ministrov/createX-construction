@@ -9,6 +9,7 @@
   &__container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    gap: var(--grid-gap);
   }
 
   &__left {
@@ -55,6 +56,7 @@
 .footer-form {
   &__title {
     margin: 0;
+    margin-bottom: 24px;
     font-weight: 700;
     font-size: 24px;
     line-height: 150%;
@@ -63,14 +65,78 @@
 
   &__items {
     @include flex-v-center;
+
+    margin-bottom: 15px;
+  }
+
+  .form-field {
+    margin: 0;
+    width: 364px;
+  }
+
+  .form-field__input {
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
   }
 
   &__btn {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 11px;
+    padding-bottom: 11px;
     padding-left: 19px;
     padding-right: 19px;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+    letter-spacing: normal;
+  }
+
+  &__description {
+    margin: 0;
+    font-size: 12px;
+    line-height: 150%;
+    color: var(--color-light);
+    opacity: 0.6
+  }
+}
+
+.footer-title {
+  margin: 0;
+  margin-bottom: 15px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--color-light);
+}
+
+.footer-address {
+  padding-top: 20px;
+
+  &__title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--color-light);
+  }
+
+  &__item {
+    display: block;
+    font-size: 16px;
+    line-height: 160%;
+
+    &:not(:last-child) {
+      margin-right: 4px;
+    }
+  }
+
+  &__name {
+    color: var(--color-light);
   }
 }
