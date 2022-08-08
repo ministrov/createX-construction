@@ -124,6 +124,7 @@ a {
 }
 
 .btn {
+  display: inline-block;
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 39px;
@@ -145,7 +146,13 @@ a {
 
   &--stroke {
     &-light {
+      color: var(--color-light);
       border-color: var(--color-light);
+    }
+
+    &-primary {
+      color: var(--color-primary);
+      border-color: var(--color-primary);
     }
   }
 }
