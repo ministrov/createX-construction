@@ -16,7 +16,7 @@
     line-height: 150%;
     border: 1px solid #D7DADD;
     border-radius: 4px;
-    background: #F4F5F7;
+    background-color: var(--color-athens);
 
     &::placeholder {
       color: #9A9CA5;
@@ -42,7 +42,7 @@
 
     .form-field__input {
       width: 100%;
-      background-color:  #f4f5f7;
+      background-color:  var(--color-athens);
     }
   }
 }
