@@ -22,10 +22,14 @@
 @import "./components/request-section";
 @import "./components/footer";
 
+@import "./components/hero-services";
+@import "./components/services-content";
+
 // подключения компонентов страницы(маленькие компоненты)
 
 @import "./components/nav";
 @import "./components/header-contacts";
 @import "./components/video-block";
+@import "./components/breadcrumbs";
 @import "./components/learn-more";
 @import "./components/social";
