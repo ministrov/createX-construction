@@ -1,16 +1,10 @@
 import GraphAccordion from '../vendor/graph-accordion'
 
 const accordion1 = new GraphAccordion('.accordion-1', {
-  speed: 500,
-  isOpen: (acc) => {
-    console.log(acc);
-  },
-  isClose: (acc) => {
-    console.log(acc);
-  }
+  speed: 400,
 });
 
 const accordion2 = new GraphAccordion('.accordion-2', {
-  speed: 500
+  speed: 400
 });
 

@@ -26,7 +26,6 @@ export default class GraphAccordion {
 
 		if (this.accordion) {
 			this.accordion.addEventListener('click', (e) => {
-        console.log(e,'event!');
 				this.accordion.classList.toggle('open');
 
 				if (this.accordion.classList.contains('open')) {
