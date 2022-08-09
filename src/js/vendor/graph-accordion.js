@@ -1,4 +1,4 @@
-class GraphAccordion {
+export default class GraphAccordion {
 	constructor(selector, options) {
 		let defaultOptions = {
 			isOpen: () => {},
@@ -23,10 +23,10 @@ class GraphAccordion {
   }
 
 	event() {
-		console.log('event!');
 
 		if (this.accordion) {
 			this.accordion.addEventListener('click', (e) => {
+        console.log(e,'event!');
 				this.accordion.classList.toggle('open');
 
 				if (this.accordion.classList.contains('open')) {
@@ -56,4 +56,3 @@ class GraphAccordion {
 	}
 }
 
-console.log('hello');
