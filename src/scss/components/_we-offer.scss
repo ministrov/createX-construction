@@ -3,12 +3,6 @@
   padding-bottom: 180px;
   background-color: var(--color-light);
 
-  &__container {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: var(--grid-gap);
-  }
-
   &__image {
     grid-column: 7 span;
   }
