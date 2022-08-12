@@ -1,0 +1,18 @@
+.clients {
+  padding-top: 160px;
+  padding-bottom: 120px;
+  padding-left: 0;
+  padding-right: 0;
+  background-color: var(--color-light);
+
+  &__title {
+    margin-bottom: 60px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 102px;
+  }
+}
+
