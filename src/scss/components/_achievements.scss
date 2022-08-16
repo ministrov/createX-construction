@@ -1,0 +1,44 @@
+.achievements {
+  padding-top: 120px;
+  background-color: red;
+
+  &__item {
+    @include flex-column-center;
+    grid-column: 3 span;
+    padding-top: 70px;
+    background-position: top center;
+    background-size: 48px 48px;
+    background-repeat: no-repeat;
+
+    &--recomendation {
+      background-image: url("../img/like.svg");
+    }
+
+    &--renovated {
+      background-image: url("../img/paint.svg");
+    }
+
+    &--specialists {
+      background-image: url("../img/helmet.svg");
+    }
+
+    &--finishing {
+      background-image: url("../img/pant.svg");
+    }
+  }
+
+  &__value {
+    margin-bottom: 10px;
+    font-size: 46px;
+    line-height: 130%;
+    text-align: center;
+    color: var(--color-primary);
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 150%;
+    text-align: center;
+    color: var(--color-ebony);
+  }
+}
