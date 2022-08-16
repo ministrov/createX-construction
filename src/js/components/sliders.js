@@ -130,3 +130,26 @@ const testimonialsSlider = new Swiper('.testimonials__items', {
     prevEl: '.testimonials__prev'
   },
 });
+
+const workImages = document.querySelector(".portfolio-images-slider");
+
+if (workImages) {
+  const workSlider = new Swiper(".portfolio-images-nav", {
+    spaceBetween: 20,
+    slidesPerView: 10,
+    freeMode: true,
+    watchSlidesProgress: true,
+  });
+
+  const workSliderNav = new Swiper(workImages, {
+    spaceBetween: 20,
+    slidesPerView: 1,
+    navigation: {
+      nextEl: ".portfolio-images__prev",
+      prevEl: ".portfolio-images__next",
+    },
+    thumbs: {
+      swiper: workSlider,
+    },
+  });
+}
