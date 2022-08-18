@@ -1,0 +1,135 @@
+.achievements {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background-image: url("../img/achievements-bg.jpg");
+  background-position: right bottom -350px;
+  background-repeat: no-repeat;
+  background-color: var(--color-light);
+
+  &__item {
+    @include flex-column-center;
+    grid-column: 3 span;
+    padding-top: 70px;
+    background-position: top center;
+    background-size: 48px 48px;
+    background-repeat: no-repeat;
+
+    &--recomendation {
+      background-image: url("../img/like.svg");
+    }
+
+    &--renovated {
+      background-image: url("../img/paint.svg");
+    }
+
+    &--specialists {
+      background-image: url("../img/helmet.svg");
+    }
+
+    &--finishing {
+      background-image: url("../img/pant.svg");
+    }
+  }
+
+  &__value {
+    margin-bottom: 10px;
+    font-size: 46px;
+    line-height: 130%;
+    text-align: center;
+    color: var(--color-primary);
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 150%;
+    text-align: center;
+    color: var(--color-ebony);
+  }
+
+  &__list {
+    margin-bottom: 260px;
+  }
+
+  &__content {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__info {
+    position: relative;
+    z-index: 10;
+    top: -130px;
+    left: -30px;
+    flex-shrink: 0;
+    width: 735px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    padding-left: 80px;
+    padding-right: 40px;
+    background-color: var(--color-light);
+    box-shadow: var(--main-shadow);
+    border-radius: 4px;
+  }
+}
+
+.quote {
+  margin: 0;
+
+  &__content {
+    position: relative;
+    margin-bottom: 52px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 53px;
+    padding-right: 53px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 9px;
+      left: -5px;
+      width: 28px;
+      height: 20px;
+      background-image: url("../img/braces.svg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    p {
+      margin: 0;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 150%;
+      color: var(--color-ebony);
+
+      &:not(:last-child){
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__footer {
+    min-height: 68px;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 53px;
+    padding-right: 53px;
+    font-size: 14px;
+    line-height: 150%;
+    background-image: url("../img/signature.svg");
+    background-size: 100px 68px;
+    background-position: right 65px center;
+    background-repeat: no-repeat;
+    color: var(--color-storm);
+  }
+
+  &__author {
+    display: block;
+    margin-bottom: 2px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--color-ebony);
+  }
+}

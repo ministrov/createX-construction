@@ -1,0 +1,15 @@
+.map {
+  padding-top: 80px;
+  padding-bottom: 120px;
+  background-color: var(--color-athens);
+
+  &__title {
+    margin-bottom: 60px;
+  }
+
+  &__block {
+    img {
+      background-color: var(--color-athens);
+    }
+  }
+}
