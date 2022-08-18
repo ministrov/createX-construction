@@ -14,4 +14,18 @@
     grid-template-columns: repeat(6, 1fr);
     gap: 102px;
   }
+
+  &--about {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    background-color: var(--color-light);
+
+    .partners__title {
+      margin-bottom: 24px;
+    }
+
+    .partners__list {
+      row-gap: 40px;
+    }
+  }
 }

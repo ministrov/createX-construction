@@ -1,0 +1,51 @@
+.team {
+  padding-top: 54px;
+  padding-bottom: 54px;
+  background-color: var(--color-light);
+
+  &__list {
+    row-gap: 60px;
+    column-gap: var(--grid-gap);
+    margin-bottom: 80px;
+  }
+
+  &__image {
+    display: inline-block;
+    margin-bottom: 12px;
+  }
+
+  &__item {
+    grid-column: 3 span;
+    width: 285px;
+  }
+
+  &__name {
+    margin: 0;
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 150%;
+    text-align: center;
+    color: var(--color-gray);
+  }
+
+  &__post {
+    margin: 0;
+    font-size: 16px;
+    line-height: 160%;
+    text-align: center;
+    color: var(--color-storm);
+  }
+
+  &__text {
+    margin: 0;
+    font-size: 18px;
+    line-height: 150%;
+    color: var(--color-ebony);
+
+    a {
+      text-decoration-line: underline;
+      color: var(--color-primary);
+    }
+  }
+}
