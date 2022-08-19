@@ -1,7 +1,7 @@
 
 .employee-benefits {
   padding-top: 80px;
-  padding-bottom: 80px;
+  padding-bottom: 153px;
   background-color: #f4f5f7;
 
   &__list {
@@ -32,16 +32,16 @@
       }
     }
 
-    &--quality {
-      background-image: url("../img/quality.svg");
+    &--training {
+      background-image: url("../img/training.svg");
     }
 
-    &--safety {
-      background-image: url("../img/safety.svg");
+    &--growth {
+      background-image: url("../img/growth.svg");
     }
 
-    &--comfort {
-      background-image: url("../img/comfort.svg");
+    &--salary {
+      background-image: url("../img/salary.svg");
     }
   }
 
