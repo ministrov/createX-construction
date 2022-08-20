@@ -30,7 +30,7 @@ if (portSlider) {
       prevEl: '.portfolio-section__prev'
     },
   });
-
+  console.log(portfolioSlider);
   document.querySelector('.portfolio-section__prev').addEventListener('click', () => {
     const activeSlide = portSlider.querySelector('.swiper-slide-next');
 

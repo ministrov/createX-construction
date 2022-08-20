@@ -1,14 +1,29 @@
 .categories {
   padding-top: 120px;
   background-color: teal;
+
+  &__title {
+    margin-bottom: 41px;
+  }
+
+  &__categories-nav {
+    margin-bottom: 60px;
+  }
 }
 
 .categories-nav {
   display: grid;
-  grid-template-columns: repeat(6, 205px);
+  grid-template-columns: repeat(6, auto);
   justify-items: center;
-  
+
   &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-left: 10px;
+    padding-right: 10px;
     font-weight: 700;
     font-size: 16px;
     line-height: 160%;
@@ -18,7 +33,15 @@
 }
 
 .categories-list {
+  row-gap: 60px;
+  column-gap: var(--grid-gap);
+
   &__item {
     grid-column: 6 span;
+  }
+
+  .news-article__description {
+    height: 52px;
+    overflow: hidden;
   }
 }
