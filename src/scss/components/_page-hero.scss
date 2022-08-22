@@ -43,6 +43,26 @@
     color: var(--color-storm);
   }
 
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__article-meta {
+    .article-meta__item {
+      &:first-child {
+        font-weight: 700;
+        color: var(--color-primary);
+      }
+    }
+  }
+
+  &__social {
+    svg {
+      fill: var(--color-storm);
+    }
+  }
+
   &--services {
     background-image: url("../img/services-hero-bg.png");
   }
@@ -73,5 +93,15 @@
   &--news {
     background-image: url("../img/news-hero-bg.png");
     background-position: right -9px bottom;
+  }
+
+  &--post {
+    .page-hero__title {
+      max-width: initial;
+      font-size: 64px;
+      line-height: 120%;
+      text-transform: initial;
+      letter-spacing: 1px;
+    }
   }
 }
