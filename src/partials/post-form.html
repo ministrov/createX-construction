@@ -1,5 +1,20 @@
-<section>
-  <div class="container">
-    <h2>post-form</h2>
+<form class="post-form">
+  <h2 class="post-form__title title title--center">Leave your comments</h2>
+  <div class="post-form__top">
+    <label class="post-form__field form-field form-field--gray">
+      <span class="form-field__caption">Name*</span>
+      <input type="text" name="name" placeholder="Your name" class="form-field__input" required>
+    </label>
+    <label class="post-form__field form-field form-field--gray">
+      <span class="form-field__caption">Email*</span>
+      <input type="text" name="name" placeholder="Your working email" class="form-field__input" required>
+    </label>
   </div>
-</section>
+  <label class="post-form__field post-form__field--big form-field form-field--gray">
+    <span class="form-field__caption">Your comment*</span>
+    <textarea name="message" placeholder="Type comment here" class="form-field__input form-field__input--big"></textarea>
+  </label>
+  <div class="centered">
+    <button class="btn-reset post-form__btn btn btn--fill">Post Comment</button>
+  </div>
+</form>
