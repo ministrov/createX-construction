@@ -1,5 +1,5 @@
 .post {
-  background-color: teal;
+  background-color: var(--color-light);
 
   &__image {
     width: 100%;
@@ -92,6 +92,7 @@
 
     ul {
       margin: 0;
+      margin-bottom: 24px;
       padding: 0;
       list-style: none;
 
