@@ -1,0 +1,47 @@
+.post-form {
+  padding-top: 37px;
+  background-color: red;
+
+  &__title {
+    margin-bottom: 50px;
+  }
+
+  &__top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    margin-bottom: 22px;
+
+    // Alternative way to do it
+
+    // display: flex;
+    // justify-content: space-between;
+    // flex-wrap: wrap;
+  }
+
+  .form-field__caption {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+
+  .form-field__input {
+    height: 52px;
+
+    &--big {
+      height: 100px;
+    }
+
+    &::placeholder {
+      font-size: 16px;
+    }
+  }
+
+  &__field {
+    // width: 48%;
+
+    &--big {
+      margin-bottom: 46px;
+      // width: 100%;
+    }
+  }
+}

@@ -1,0 +1,123 @@
+.post {
+  padding-bottom: 180px;
+  background-color: var(--color-light);
+
+  &__image {
+    width: 100%;
+    margin-top: -79px;
+    object-fit: cover;
+  }
+
+  &__wrapper {
+    max-width: 840px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  &__share {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--color-ebony);
+
+    span {
+      margin-right: 10px;
+    }
+
+    svg {
+      fill: var(--color-storm);
+      opacity: 1;
+    }
+  }
+
+  &__content {
+    padding-top: 80px;
+    padding-bottom: 60px;
+
+    * {
+      margin-bottom: 28px;
+      font-size: 16px;
+      line-height: 160%;
+      color: var(--color-gray);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    h2 {
+      margin: 0;
+      margin-bottom: 24px;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 150%;
+      color: var(--color-ebony);
+    }
+
+    p {
+      margin: 0;
+      margin-bottom: 28px;
+      font-size: 16px;
+      line-height: 160%;
+      color: var(--color-gray);
+    }
+
+    blockquote {
+      position: relative;
+      margin: 0;
+      margin-bottom: 28px;
+      padding-top: 21px;
+      padding-bottom: 21px;
+      padding-left: 58px;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 150%;
+      color: var(--color-ebony);
+
+      &::before {
+        position: absolute;
+        content: "";
+        top: 21px;
+        left: 0;
+        width: 28px;
+        height: 20px;
+        background-image: url("../img/braces.svg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
+
+    ul {
+      margin: 0;
+      margin-bottom: 24px;
+      padding: 0;
+      list-style: none;
+
+      li {
+        position: relative;
+        padding-left: 32px;
+
+        &::before {
+          position: absolute;
+          content: "";
+          top: 4px;
+          left: 0;
+          width: 16px;
+          height: 16px;
+          background-image: url("../img/check-list.svg");
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 3px;
+        }
+      }
+    }
+  }
+}
