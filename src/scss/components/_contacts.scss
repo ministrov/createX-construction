@@ -1,3 +1,46 @@
 .contacts {
+  padding-top: 120px;
   background-color: tomato;
+
+  &__content {
+    display: flex;
+    gap: 135px;
+  }
+
+  &__image {
+    flex-shrink: 0;
+    width: 495px;
+    margin-right: 20px;
+  }
+
+  &__form-contacts {
+    max-width: 600px;
+  }
 }
+
+.form-contacts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &__field {
+    width: 47.5%;
+    max-height: 78px;
+  }
+
+  .form-field__caption {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--color-gray);
+  }
+
+  .form-field__input {
+    height: 52px;
+    font-size: 16px;
+    line-height: 160%;
+    color: #9A9CA5;
+  }
+}
+
