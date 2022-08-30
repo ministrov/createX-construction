@@ -1,5 +1,53 @@
-<section class="contacts-form">
+<section class="contacts">
   <div class="container">
-    <h2>Contacts Form</h2>
+    <h2 class="contacts__title title title--center">Contact us</h2>
+    <p class="contacts__description description description--center">Please complete the form. Detailed information will help&nbsp;us to&nbsp;make a&nbsp;tuned offer.
+    </p>
+    <div class="contacts__content">
+      <img class="contacts__image" src="img/contacts-image.jpg" alt="" aria-hidden="true">
+      <form action="#" class="contacts__form-contacts form-contacts">
+        <label class="form-contacts__field form-field form-field--gray">
+          <span class="form-field__caption">Name*</span>
+          <input type="text" name="name" placeholder="Your name" class="form-field__input" required>
+        </label>
+        <label class="form-contacts__field form-field form-field--gray">
+          <span class="form-field__caption">I am interested in</span>
+          <select name="interested" id="" class="form-field__select">
+            <option value="">Choose interested</option>
+            <option value="Interior_Design">Interior Design</option>
+          </select>
+        </label>
+        <label class="form-contacts__field form-field form-field--gray">
+          <span class="form-field__caption">Phone*</span>
+          <input type="text" name="phone" placeholder="Your phone number" class="form-field__input" required>
+        </label>
+        <label class="form-contacts__field form-field form-field--gray">
+          <span class="form-field__caption">Location*</span>
+          <select name="location" id="" class="form-field__select" required>
+            <option value="">Choose location</option>
+            <option value="New_York">New York</option>
+          </select>
+        </label>
+        <label class="form-contacts__field form-field form-field--gray">
+          <span class="form-field__caption">Email</span>
+          <input type="email" name="email" placeholder="Your working email" class="form-field__input" required>
+        </label>
+        <fieldset class="form-contacts__field form-field form-field--gray">
+          <legend class="form-field__caption">Preferred contact method</legend>
+          <label class="contacts__custom-radio custom-radio">
+            <input type="radio" class="custom-radio__input">
+            <span class="custom-radio__text">Phone</span>
+          </label>
+          <label class="form-contacts__custom-radio custom-radio">
+            <input type="radio" class="custom-radio__input">
+            <span class="custom-radio__text">Email</span>
+          </label>
+          <label class="form-contacts__custom-radio custom-radio">
+            <input type="radio" class="custom-radio__input">
+            <span class="custom-radio__text">Viber</span>
+          </label>
+        </fieldset>
+      </form>
+    </div>
   </div>
 </section>
