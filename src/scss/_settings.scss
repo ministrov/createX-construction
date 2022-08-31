@@ -247,6 +247,67 @@ a {
   }
 }
 
+.custom-radio {
+  &__input {
+    position: absolute;
+    opacity: 0;
+
+  }
+
+  &__text {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding-left: 27px;
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--color-gray);
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 4px;
+      left: -1px;
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      border: 1px solid #B3B7BC;
+      border-radius: 100%;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 8px;
+      left: 3px;
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border: 1px solid var(--color-primary);
+      border-radius: 50%;
+      background-color: var(--color-primary);
+      background-position: center;
+      background-size: 8px 8px;
+      background-repeat: no-repeat;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+  }
+
+  &__input:checked + &__text::before {
+    border-color: var(--color-primary);
+  }
+
+  &__input:checked + &__text::after {
+    opacity: 1;
+  }
+
+  &__input:focus + &__text {
+    outline: 3px solid var(--color-primary);
+  }
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
