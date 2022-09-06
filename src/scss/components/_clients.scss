@@ -14,5 +14,12 @@
     grid-template-columns: repeat(6, 1fr);
     gap: 102px;
   }
+
+  &__link {
+    &:focus {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 6px;
+    }
+  }
 }
 

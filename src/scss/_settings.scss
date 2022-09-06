@@ -186,6 +186,23 @@ a {
       border-color: var(--color-primary);
     }
   }
+
+  &--stroke-primary {
+    &:focus {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 6px;
+    }
+
+    &:hover {
+      color: var(--color-light);
+      background-color: var(--color-active);
+    }
+
+    &:active {
+      color: var(--color-light);
+      background-color: var(--color-active);
+    }
+  }
 }
 
 .title {

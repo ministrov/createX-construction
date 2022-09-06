@@ -28,11 +28,17 @@
     &:not(:last-of-type) {
       margin-bottom: 13px;
     }
+
     .accordion__control {
       position: relative;
       padding-left: 44px;
       padding-right: 20px;
       text-align: left;
+
+      &:focus {
+        outline: 2px solid var(--color-primary);
+        outline-offset: 6px;
+      }
     }
 
     .accordion__title {

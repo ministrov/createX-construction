@@ -50,6 +50,7 @@
   &__reply {
     display: flex;
     align-items: center;
+    transition: color 0.3s ease-in-out;
 
     svg {
       display: block;
@@ -66,6 +67,31 @@
       font-size: 14px;
       line-height: 150%;
       color: var(--color-storm);
+    }
+
+    &:focus {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 6px;
+    }
+
+    &:hover {
+      svg {
+        fill: var(--color-active);
+      }
+
+      span {
+        color: var(--color-active)
+      }
+    }
+
+    &:active {
+      svg {
+        fill: var(--color-active);
+      }
+
+      span {
+        color: var(--color-active)
+      }
     }
   }
 }
