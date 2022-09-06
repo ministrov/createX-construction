@@ -81,6 +81,7 @@
     box-sizing: border-box;
     border: 1px solid #D7DADD;
     border-radius: 4px;
+    transition: color 0.3s ease-in-out;
 
     &::after {
       position: absolute;
@@ -96,6 +97,11 @@
       background-size: cover;
       background-repeat: no-repeat;
       pointer-events: none;
+    }
+
+    &:focus {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 6px;
     }
   }
 

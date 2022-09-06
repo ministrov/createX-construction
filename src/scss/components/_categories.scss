@@ -39,6 +39,19 @@
     border-radius: 4px;
     transition: color 0.3s ease-in-out;
 
+    &:focus {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 6px;
+    }
+
+    &:hover {
+      color: var(--color-active);
+    }
+
+    &:active {
+      color: var(--color-active);
+    }
+
     &--active {
       color: var(--color-primary);
       border-color: currentColor;
@@ -89,6 +102,19 @@
 
     &--active {
       color: var(--color-primary);
+    }
+
+    &:focus {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 6px;
+    }
+
+    &:hover {
+      color: var(--color-active);
+    }
+
+    &:active {
+      color: var(--color-active);
     }
   }
 }

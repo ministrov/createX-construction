@@ -79,6 +79,20 @@
     font-size: 16px;
     text-decoration: underline;
     color: var(--color-primary);
+    transition: color 0.3s ease-in-out;
+
+    &:focus {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 6px;
+    }
+
+    &:hover {
+      color: var(--color-active);
+    }
+
+    &:active {
+      color: var(--color-active);
+    }
   }
 
   &__element {
@@ -96,5 +110,18 @@
     display: inline-block;
     font-size: 16px;
     color: var(--color-ebony);
+
+    &:focus {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 6px;
+    }
+
+    &:hover {
+      color: var(--color-active);
+    }
+
+    &:active {
+      color: var(--color-active);
+    }
   }
 }
