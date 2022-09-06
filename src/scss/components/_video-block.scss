@@ -43,6 +43,19 @@
         fill: var(--color-light);
       }
     }
+
+    &:focus {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 6px;
+    }
+
+    &:hover {
+      color: var(--color-primary);
+    }
+
+    &:active {
+      color: var(--color-active);
+    }
   }
 
   &__muted {
