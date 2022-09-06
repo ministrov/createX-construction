@@ -15,6 +15,13 @@
     gap: 102px;
   }
 
+  &__link {
+    &:focus {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 6px;
+    }
+  }
+
   &--about {
     padding-top: 120px;
     padding-bottom: 120px;
