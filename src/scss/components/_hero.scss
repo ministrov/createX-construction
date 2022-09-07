@@ -1,8 +1,24 @@
 .hero {
-
-
   &__content {
     max-width: 590px;
+  }
+
+  &__next {
+    position: absolute;
+    z-index: 10;
+    right: 32px;
+    top: 50%;
+    background-color: var(--color-light);
+    transform: translateY(-50%);
+  }
+
+  &__prev {
+    position: absolute;
+    z-index: 10;
+    left: 32px;
+    top: 50%;
+    background-color: var(--color-light);
+    transform: translateY(-50%);
   }
 
   &__btns {
@@ -15,6 +31,7 @@
 }
 
 .hero-slider {
+  position: relative;
   width: 100%;
   overflow: hidden;
 }

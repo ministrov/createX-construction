@@ -1,4 +1,4 @@
-import Swiper from 'swiper';
+import Swiper from 'swiper/bundle';
 
 const bodyStyle = window.getComputedStyle(document.body);
 const gap = parseInt(bodyStyle.getPropertyValue('--grid-gap'));
@@ -153,14 +153,13 @@ if (workImages) {
 
 const heroSlider = new Swiper('.hero-slider', {
   slidesPerView: 1,
-  spaceBetween: gap,
-  loop: true,
   navigation: {
     nextEl: '.hero__next',
     prevEl: '.hero__prev'
   },
   pagination: {
-    el: '.hero__pagination',
-    type: 'bullets'
+    el: 'hero__pagination',
+    type: 'bullets',
+    clickable: true
   }
 });
