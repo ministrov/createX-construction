@@ -22,9 +22,15 @@
       color: #9A9CA5;
     }
 
+    &:focus {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 6px;
+    }
+
+
     &--big {
       padding-top: 10px;
-      height: 66px;
+      // height: 66px;
       resize: none;
     }
   }
@@ -43,6 +49,14 @@
     .form-field__input {
       width: 100%;
       background-color:  var(--color-athens);
+    }
+  }
+}
+
+.know-more-form__field {
+  .form-field__input {
+    &--big {
+      padding-top: 0;
     }
   }
 }

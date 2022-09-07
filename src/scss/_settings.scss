@@ -139,9 +139,23 @@ a {
   border-width: 1px;
   border-color: transparent;
   border-radius: 4px;
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 
   &--fill {
     background-color: var(--color-primary);
+
+    &:focus {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 4px;
+    }
+
+    &:hover {
+      background-color: var(--color-active);
+    }
+
+    &:active {
+      background-color: var(--color-active);
+    }
   }
 
   &--stroke {
@@ -153,6 +167,40 @@ a {
     &-primary {
       color: var(--color-primary);
       border-color: var(--color-primary);
+    }
+
+    &:focus {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 4px;
+    }
+
+    &:hover {
+      color: var(--color-light);
+      background-color: var(--color-primary);
+      border-color: var(--color-primary);
+    }
+
+    &:active {
+      color: var(--color-light);
+      background-color: var(--color-active);
+      border-color: var(--color-primary);
+    }
+  }
+
+  &--stroke-primary {
+    &:focus {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 6px;
+    }
+
+    &:hover {
+      color: var(--color-light);
+      background-color: var(--color-active);
+    }
+
+    &:active {
+      color: var(--color-light);
+      background-color: var(--color-active);
     }
   }
 }

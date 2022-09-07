@@ -1,14 +1,24 @@
 .hero {
-  padding-top: 220px;
-  padding-bottom: 353px;
-  background-image: url("../img/hero-bg.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: var(--color-gray);
-
   &__content {
     max-width: 590px;
+  }
+
+  &__next {
+    position: absolute;
+    z-index: 10;
+    right: 32px;
+    top: 50%;
+    background-color: var(--color-light);
+    transform: translateY(-50%);
+  }
+
+  &__prev {
+    position: absolute;
+    z-index: 10;
+    left: 32px;
+    top: 50%;
+    background-color: var(--color-light);
+    transform: translateY(-50%);
   }
 
   &__btns {
@@ -18,4 +28,20 @@
       }
     }
   }
+}
+
+.hero-slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-slide {
+  padding-top: 220px;
+  padding-bottom: 353px;
+  background-image: url("../img/hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--color-gray);
 }

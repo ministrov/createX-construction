@@ -1,4 +1,4 @@
-import Swiper from 'swiper';
+import Swiper from 'swiper/bundle';
 
 const bodyStyle = window.getComputedStyle(document.body);
 const gap = parseInt(bodyStyle.getPropertyValue('--grid-gap'));
@@ -11,7 +11,6 @@ if (portSlider) {
     spaceBetween: gap,
     on: {
       init: function () {
-
         const activeSlide = portSlider.querySelector('.swiper-slide-active');
 
         const nextActiveSlide = activeSlide.nextElementSibling;
@@ -19,24 +18,22 @@ if (portSlider) {
         const nextNextActiveSlide = nextActiveSlide.nextElementSibling;
 
         activeSlide.classList.add('slider-visible');
-
         nextActiveSlide.classList.add('slider-visible');
-
         nextNextActiveSlide.classList.add('slider-visible');
       },
     },
     navigation: {
       nextEl: '.portfolio-section__next',
-      prevEl: '.portfolio-section__prev'
-    },
+      prevEl: '.portfolio-section__prev',
+    }
   });
-  console.log(portfolioSlider);
+
   document.querySelector('.portfolio-section__prev').addEventListener('click', () => {
     const activeSlide = portSlider.querySelector('.swiper-slide-next');
 
     document.querySelectorAll('.portfolio-section__items .swiper-slide').forEach(el => {
       el.classList.remove('slider-visible');
-    })
+    });
 
     if (activeSlide.previousElementSibling) {
       const nextActiveSlide = activeSlide.previousElementSibling;
@@ -131,7 +128,7 @@ const testimonialsSlider = new Swiper('.testimonials__items', {
   },
 });
 
-const workImages = document.querySelector(".portfolio-images-slider");
+const workImages = document.querySelector('.portfolio-images-slider');
 
 if (workImages) {
   const workSlider = new Swiper(".portfolio-images-nav", {
@@ -153,3 +150,16 @@ if (workImages) {
     },
   });
 }
+
+const heroSlider = new Swiper('.hero-slider', {
+  slidesPerView: 1,
+  navigation: {
+    nextEl: '.hero__next',
+    prevEl: '.hero__prev'
+  },
+  pagination: {
+    el: 'hero__pagination',
+    type: 'bullets',
+    clickable: true
+  }
+});
