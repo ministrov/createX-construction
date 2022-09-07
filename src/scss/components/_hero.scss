@@ -1,11 +1,5 @@
 .hero {
-  padding-top: 220px;
-  padding-bottom: 353px;
-  background-image: url("../img/hero-bg.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: var(--color-gray);
+
 
   &__content {
     max-width: 590px;
@@ -18,4 +12,19 @@
       }
     }
   }
+}
+
+.hero-slider {
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-slide {
+  padding-top: 220px;
+  padding-bottom: 353px;
+  background-image: url("../img/hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--color-gray);
 }

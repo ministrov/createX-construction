@@ -76,6 +76,12 @@
       outline: 2px solid var(--color-primary);
       outline-offset: 6px;
     }
+
+    &:hover {
+      .portfolio-tabs-nav__text {
+        color: var(--color-ebony);
+      }
+    }
   }
 
   &__icon {
