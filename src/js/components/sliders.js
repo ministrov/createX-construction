@@ -158,8 +158,19 @@ const heroSlider = new Swiper('.hero-slider', {
     prevEl: '.hero__prev'
   },
   pagination: {
-    el: 'hero__pagination',
+    el: '.hero__pagination',
     type: 'bullets',
     clickable: true
-  }
+  },
+  autoplay: {
+    delay: 2000
+  },
+  on: {
+    init: function () {
+      const paginationBullets = document.querySelectorAll('.hero__pagination .swiper-pagination-bullet');
+      paginationBullets.forEach(el => {
+        el.innerHTML = `<span class="hero__bar"></span>`
+      })
+    },
+  },
 });
