@@ -1,5 +1,5 @@
 const videoBlock = document.querySelector('.video-block');
-const video = videoBlock.querySelector('.video-block__content');
+const video = videoBlock.querySelector('video');
 const playBtn = videoBlock.querySelector('.video-block__play');
 
 playBtn.addEventListener('click', () => {
