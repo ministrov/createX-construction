@@ -365,6 +365,9 @@ a {
   display: grid;
   grid-template-columns: auto 40px;
   column-gap: 15px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 
   &__text {
     align-self: end;
@@ -390,5 +393,10 @@ a {
       fill: currentColor;
       object-fit: cover;
     }
+  }
+
+  &--active {
+    opacity: 1;
+    visibility: visible;
   }
 }

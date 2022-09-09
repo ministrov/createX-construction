@@ -67,7 +67,10 @@
   }
 
   &__scroll-up {
-    transform: translate(-131px, 0);
+    position: fixed;
+    right: calc((100% - 1230px) / 2);
+    bottom: 80px;
+    z-index: 1000;
   }
 }
 
