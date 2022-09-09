@@ -13,6 +13,14 @@
     bottom: 0;
     z-index: 3;
     background-color: rgba(#1e212c, 0.6);
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  }
+
+  &--played {
+    &::before {
+      visibility: hidden;
+      opacity: 0;
+    }
   }
 
   &__content {
@@ -34,7 +42,7 @@
     border-radius: 100%;
     background-color: var(--color-primary);
     transform: translate(-50%, -50%);
-    transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 
     svg {
       width: 26px;
@@ -54,39 +62,10 @@
     &:active {
       background-color: var(--color-active);
     }
-  }
 
-  &__muted {
-    @include flex-all-center;
-
-    position: absolute;
-    left: 32px;
-    bottom: 32px;
-    z-index: 10;
-    width: 40px;
-    height: 40px;
-    border-radius: 100%;
-    background-color: rgba(255, 255, 255, 0.2);
-    transition: background-color 0.3s ease-in-out;
-
-    svg {
-      width: 20px;
-      height: 20px;
-      fill: var(--color-light);
-
-    }
-
-    &:focus {
-      outline: 2px solid var(--color-light);
-      outline-offset: 6px;
-    }
-
-    &:hover {
-      background-color: rgba(255, 255, 255, 0.5);
-    }
-
-    &:active {
-      background-color: rgba(255, 255, 255, 0.5);
+    &--played {
+      visibility: hidden;
+      opacity: 0;
     }
   }
 }
