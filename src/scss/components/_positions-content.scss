@@ -137,17 +137,38 @@
       }
 
       &:hover {
-        color: var(--color-active);
+        color: var(--color-light);
+        background-color: var(--color-primary);
+        border-color: transparent;
       }
 
       &:active {
-        color: var(--color-active);
+        color: var(--color-light);
+        background-color: var(--color-active);
+        border-color: transparent;
       }
     }
 
     &--send {
       padding-left: 54px;
       padding-right: 54px;
+
+      &:focus {
+        outline: 2px solid var(--color-primary);
+        outline-offset: 6px;
+      }
+
+      &:hover {
+        color: var(--color-primary);
+        background-color: transparent;
+        border-color: var(--color-primary);
+      }
+
+      &:active {
+        color: var(--color-light);
+        background-color: transparent;
+        border-color: var(--color-active);
+      }
     }
   }
 }
