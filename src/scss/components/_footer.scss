@@ -215,25 +215,3 @@
   }
 }
 
-
-.scroll-up {
-  display: grid;
-  grid-template-columns: auto 40px;
-  column-gap: 15px;
-
-  &__text {
-    align-self: end;
-    font-size: 14px;
-    line-height: 150%;
-    text-transform: uppercase;
-    color: var(--color-light);
-  }
-
-  &__link {
-    display: block;
-    width: 40px;
-    height: 40px;
-    background-color: var(--color-primary);
-    border-radius: 4px;
-  }
-}
