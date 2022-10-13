@@ -50,16 +50,16 @@
   }
 
   &--small {
-    .recent-article__description {
+    .news-article__description {
       display: none;
     }
 
-    .recent-article__text {
+    .news-article__text {
       padding-top: 12;
       padding-bottom: 12px;
     }
 
-    .recent-article__title {
+    .news-article__title {
       margin-bottom: 9px;
     }
   }

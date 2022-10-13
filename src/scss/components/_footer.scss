@@ -71,6 +71,11 @@
     right: calc((100% - 1230px) / 2);
     bottom: 80px;
     z-index: 1000;
+
+    @include big-desktop {
+      right: 20px;
+      bottom: 20px;
+    }
   }
 }
 
