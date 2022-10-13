@@ -9,7 +9,7 @@ if (document.querySelector('.hero')) {
 }
 
 if (document.querySelector('.page-hero')) {
-  heroHeight = document.querySelector('page-hero').offsetHeight;
+  heroHeight = document.querySelector('.page-hero').offsetHeight;
 }
 
 const isScrollUpVisible = (y = 0) => {
