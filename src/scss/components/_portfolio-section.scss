@@ -14,6 +14,11 @@
     max-width: 710px;
     margin: 0;
     padding-bottom: 12px;
+
+    @include tablet {
+      font-size: 40px;
+      line-height: 55px;
+    }
   }
 
   &__slider-nav {

@@ -39,4 +39,8 @@
   @include minidesk {
     max-width: 100px;
   }
+
+  @include tablet {
+    max-width: none;
+  }
 }
