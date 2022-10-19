@@ -82,3 +82,74 @@ const printNumbers = (/** @type {number} */ initialNumber) => {
 };
 
 printNumbers(6);
+
+
+// Реализуйте функцию joinNumbersFromRange(), которая объединяет все числа из диапазона в строку и возвращает её:
+// joinNumbersFromRange(1, 1); // '1'
+// joinNumbersFromRange(2, 3); // '23'
+// joinNumbersFromRange(5, 10); // '5678910'
+
+const joinNumbersFromRange = (start, finish) => {
+  let i = start;
+  let result = '';
+
+  while (i <= finish) {
+    result = result + i;
+    i += 1;
+  }
+  return result;
+}
+
+joinNumbersFromRange(2, 4);
+
+
+// Реализуйте функцию mySubstr(), которая извлекает из строки подстроку указанной длины. Она принимает на вход два аргумента (строку и длину) и возвращает подстроку, начиная с первого символа:
+
+// const text = 'If I look back I am lost';
+// console.log(mySubstr(text, 1));  # => 'I'
+// console.log(mySubstr(text, 7));  # => 'If I lo'
+
+const mySubstr = (text, length) => {
+  let i = 0;
+  let result = '';
+
+  while (i < text.length) {
+    result = text.slice(0, length);
+    i += 1;
+  }
+  return result;
+}
+
+const mySubstr2 = (string, length) => {
+  let resultString = '';
+  let i = 0;
+  while (i < length) {
+    resultString += string[i];
+    i += 1;
+  }
+
+  return resultString;
+};
+
+
+// Функция countChars() из теории считает, сколько раз входит буква в предложение и при этом учитывает регистр букв. То есть A и a с её точки зрения разные символы. Реализуйте вариант этой же функции, так чтобы регистр букв был не важен:
+
+// countChars('HexlEt', 'e'); // 2
+// countChars('HexlEt', 'E'); // 2
+
+const countChars = (string, char) => {
+  let count = 0;
+  let i = 0;
+
+  while (i < string.length) {
+    if (string[i] === char) {
+      count = count + 1
+    }
+
+    i += 1;
+  }
+
+  return count.toLowerCase();
+}
+
+
