@@ -1,3 +1,6 @@
+import { compileString } from 'sass';
+import {reverse} from './accordion';
+
 console.log('maxgraph');
 
 // Реализуйте функцию getNumberExplanation(), которая принимает на вход число и возвращает объяснение этого числа. Если для числа нет объяснения, то возвращается null:
@@ -12,7 +15,7 @@ const getNumberExplanation = (num) => {
   } else {
     return null;
   }
-}
+};
 
 console.log(getNumberExplanation(8));
 
@@ -21,17 +24,13 @@ console.log(getNumberExplanation(8));
 const getNumberExplanation2 = (number) => {
   switch (number) {
     case 666:
-      return 'devil number'
-    break;
+      return 'devil number';
     case 42:
-      return 'answer for everything'
-    break;
+      return 'answer for everything';
     case 7:
-      return 'prime number'
-    break;
-    default: null
+      return 'prime number';
   }
-}
+};
 
 const normalizeUrl = (url) => {
   if (!url.startsWith('https://')) {
@@ -98,7 +97,7 @@ const joinNumbersFromRange = (start, finish) => {
     i += 1;
   }
   return result;
-}
+};
 
 joinNumbersFromRange(2, 4);
 
@@ -118,7 +117,7 @@ const mySubstr = (text, length) => {
     i += 1;
   }
   return result;
-}
+};
 
 const mySubstr2 = (string, length) => {
   let resultString = '';
@@ -138,18 +137,61 @@ const mySubstr2 = (string, length) => {
 // countChars('HexlEt', 'E'); // 2
 
 const countChars = (string, char) => {
-  let count = 0;
   let i = 0;
+  let stringToLowerCase = string.toLowerCase();
+  let charToLowerCase = char.toLowerCase();
+  let count = 0;
 
-  while (i < string.length) {
-    if (string[i] === char) {
-      count = count + 1
+  while (i < stringToLowerCase.length) {
+    if (stringToLowerCase[i] === charToLowerCase) {
+      count = count + 1;
     }
 
     i += 1;
   }
 
-  return count.toLowerCase();
-}
+  return count;
+};
+
+const countChars2 = (str, char) => {
+  let i = 0;
+  let count = 0;
+  while (i < str.length) {
+    if (str[i].toLowerCase() === char.toLowerCase()) {
+      count = count + 1;
+    }
+    i = i + 1;
+  }
+
+  return count;
+};
 
 
+// Напишите функцию makeItFunny(), которая принимает на вход строку и возвращает её копию, у которой каждый n-ный элемент переведен в верхний регистр. n – задается на входе в функцию.
+
+// Для определения каждого n-ного элемента понадобится остаток от деления %. Подумайте, как его можно использовать.
+
+const makeItFunny = (str, n) => {
+  let i = 0;
+  let result = '';
+  while (i < str.length) {
+    const current = str[i];
+    if ((i + 1) % n === 0) {
+      result = `${result}${current.toUpperCase()}`;
+    } else {
+      result = `${result}${current}`;
+    }
+    i++;
+  }
+
+  return result;
+};
+
+
+let number = 10;
+
+console.log(number);
+
+var name = 'Ivan';
+
+console.log(name);
