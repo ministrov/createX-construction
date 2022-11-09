@@ -68,4 +68,8 @@
       opacity: 0;
     }
   }
+
+  @include mobile {
+    height: 300px;
+  }
 }

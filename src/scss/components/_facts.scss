@@ -23,10 +23,41 @@
     max-width: 736px;
     margin: 0 auto;
     gap: 48px;
+
+    @include small-tablet {
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+      justify-items: center;
+      gap: 24px;
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
   }
 
   &__title {
     margin-bottom: 62px;
+
+    @include mobile {
+      margin-bottom: 25px;
+    }
+  }
+
+  @include small-tablet {
+    padding-top: 80px;
+    padding-bottom: 45px;
+  }
+
+  @include mobile {
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 }
 

@@ -32,6 +32,10 @@
 
   &__footer-form {
     grid-column: 5 span;
+
+    @include small-tablet {
+      grid-column: 12 span
+    }
   }
 
   &__footer-address {
@@ -193,6 +197,10 @@
   &__col {
     &:not(:last-child) {
       margin-right: 125px;
+
+      @include small-tablet {
+        margin-right: 65px;
+      }
     }
   }
 
@@ -220,6 +228,10 @@
     &:active {
       color: var(--color-light);
     }
+  }
+
+  @include small-tablet {
+    padding-left: 24px;
   }
 }
 
