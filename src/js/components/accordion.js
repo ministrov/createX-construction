@@ -1,4 +1,4 @@
-import GraphAccordion from '../vendor/graph-accordion'
+import GraphAccordion from '../vendor/graph-accordion';
 
 if (document.querySelector('.we-offer')) {
   const accordion1 = new GraphAccordion('.accordion-1', {

@@ -1,8 +1,10 @@
 import SmoothScroll from '../vendor/smooth-scroll.min';
 
-const scroll = new SmoothScroll('.to-top');
+const scroll = new SmoothScroll('.scroll-up');
 const toTop = document.querySelector('.scroll-up');
 let heroHeight;
+
+// console.log(scroll);
 
 if (document.querySelector('.hero')) {
   heroHeight = document.querySelector('.hero').offsetHeight;
@@ -18,7 +20,7 @@ const isScrollUpVisible = (y = 0) => {
   } else {
     toTop.classList.remove('scroll-up--active');
   }
-}
+};
 
 isScrollUpVisible(window.scrollY);
 
@@ -26,6 +28,6 @@ window.addEventListener('scroll', () => {
   let y = window.scrollY;
 
   isScrollUpVisible(y);
-})
+});
 
 
