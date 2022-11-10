@@ -59,4 +59,11 @@
     font-size: 14px;
     letter-spacing: 0.5px;
   }
+
+  @include mobile {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }

@@ -8,16 +8,30 @@
 
   &__left {
     grid-column: 7 span;
+
+    @include mobile {
+      grid-column: 12 span;
+    }
   }
 
   &__logo {
     margin-right: 60px;
+
+    @include mobile {
+      display: inline-block;
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
   }
 
   &__left-top {
     @include flex-v-center;
 
     margin-bottom: 22px;
+
+    @include mobile {
+      display: block;
+    }
   }
 
   &__description {
@@ -36,14 +50,27 @@
     @include small-tablet {
       grid-column: 12 span
     }
+
+    @include mobile {
+      max-width: 280px;
+    }
   }
 
   &__footer-address {
     grid-column: 4 span;
+
+    @include mobile {
+      grid-column: 12 span;
+      max-width: 280px;
+    }
   }
 
   &__footer-nav {
     grid-column: 8 span;
+
+    @include mobile {
+      grid-column: 12 span;
+    }
   }
 
   &__copyright-wrapper {
@@ -67,6 +94,10 @@
       background-position: 2px center;
       background-size: 16px 16px;
       background-repeat: no-repeat;
+    }
+
+    @include mobile {
+      grid-column: 4 span;
     }
   }
 
@@ -201,6 +232,10 @@
       @include small-tablet {
         margin-right: 65px;
       }
+
+      @include mobile {
+        margin-right: 25px;
+      }
     }
   }
 
@@ -232,6 +267,11 @@
 
   @include small-tablet {
     padding-left: 24px;
+  }
+
+  @include mobile {
+    max-width: 280px;
+    padding-left: 0;
   }
 }
 

@@ -12,4 +12,8 @@
       background-color: var(--color-athens);
     }
   }
+
+  @include minidesk {
+    display: none;
+  }
 }

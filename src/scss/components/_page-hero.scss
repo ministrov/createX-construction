@@ -135,4 +135,8 @@
     background-image: url("../img/hero-contacts-bg.png");
     background-position: right -9px bottom;
   }
+
+  @include tablet {
+    background-image: none;
+  }
 }
