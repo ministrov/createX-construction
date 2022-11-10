@@ -6,6 +6,18 @@
   background-repeat: no-repeat;
   background-color: var(--color-light);
 
+  &__list {
+    margin-bottom: 260px;
+
+    @include tablet {
+      margin-bottom: 120px;
+    }
+
+    @include mobile {
+      margin-bottom:50px;
+    }
+  }
+
   &__item {
     @include flex-column-center;
     grid-column: 3 span;
@@ -29,14 +41,35 @@
     &--finishing {
       background-image: url("../img/pant.svg");
     }
+
+    @include tablet {
+      grid-column: 6 span;
+    }
+  }
+
+  &__image {
+    @include minidesk {
+      max-width: 45%;
+    }
+
+    @include small-tablet {
+      max-width: 100%;
+      width: 100%;
+    }
   }
 
   &__value {
     margin-bottom: 10px;
-    font-size: 46px;
+    font-size: 38px;
+    font-weight: 600;
     line-height: 130%;
     text-align: center;
     color: var(--color-primary);
+
+    @include minidesk {
+      font-size: 36px;
+      line-height: 120%;
+    }
   }
 
   &__text {
@@ -46,13 +79,13 @@
     color: var(--color-ebony);
   }
 
-  &__list {
-    margin-bottom: 260px;
-  }
-
   &__content {
     display: flex;
     align-items: flex-start;
+
+    @include small-tablet {
+      display: block;
+    }
   }
 
   &__info {
@@ -69,6 +102,20 @@
     background-color: var(--color-light);
     box-shadow: var(--main-shadow);
     border-radius: 4px;
+
+    @include minidesk {
+      left: 0;
+      top: 0;
+      width: 55%;
+    }
+
+    @include tablet {
+      width: 100%;
+    }
+
+    @include mobile {
+      padding: 0;
+    }
   }
 }
 
@@ -94,6 +141,10 @@
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
+
+      @include mobile {
+        left: 0;
+      }
     }
 
     p {
@@ -106,6 +157,15 @@
       &:not(:last-child){
         margin-bottom: 20px;
       }
+    }
+
+    @include mobile {
+      margin: 0;
+      padding: 0;
+      padding-top: 40px;
+      padding-bottom: 45px;
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 
@@ -122,6 +182,11 @@
     background-position: right 65px center;
     background-repeat: no-repeat;
     color: var(--color-storm);
+
+    @include mobile {
+      padding-bottom: 120px;
+      background-position: bottom 30px center;
+    }
   }
 
   &__author {
