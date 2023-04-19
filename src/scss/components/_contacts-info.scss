@@ -10,6 +10,12 @@
     grid-template-columns: repeat(3, 1fr);
     margin-bottom: 118px;
     gap: calc(var(--contacts-gap) * 2);
+
+    @include small-tablet {
+      --contacts-gap: 40px;
+      display: block;
+      margin-bottom: 80px;
+    }
   }
 
   &__social {
@@ -52,6 +58,18 @@
         background-size: cover;
         background-repeat: no-repeat;
       }
+
+      @include small-tablet {
+        margin-bottom: 25px;
+      }
+    }
+
+    @include small-tablet {
+      text-align: center;
+    }
+
+    @include mobile {
+      padding-bottom: 0;
     }
   }
 

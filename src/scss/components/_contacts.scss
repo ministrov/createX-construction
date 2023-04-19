@@ -6,16 +6,36 @@
   &__content {
     display: flex;
     gap: 135px;
+
+    @include minidesk {
+      flex-direction: column;
+      align-items: center;
+      gap: 35px;
+    }
   }
 
   &__image {
     flex-shrink: 0;
     width: 495px;
     margin-right: 20px;
+
+    @include minidesk {
+      width: 100%;
+      margin-right: 0;
+    }
   }
 
   &__form-contacts {
     width: 600px;
+
+    @include minidesk {
+      width: 100%;
+    }
+  }
+
+  @include mobile {
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
 }
 
@@ -27,6 +47,10 @@
   &__field {
     width: 47.5%;
     max-height: 88px;
+
+    @include mobile {
+      width: 100%;
+    }
   }
 
   .form-field__caption {
@@ -46,6 +70,12 @@
 
     .form-field__caption {
       margin-bottom: 21px;
+    }
+
+    @include mobile {
+      .form-field__flex {
+        display: flex;
+      }
     }
   }
 
@@ -119,6 +149,10 @@
     display: flex;
     justify-content: space-between;
     padding-top: 39px;
+
+    @include mobile {
+      display: block;
+    }
   }
 
   &__custom-checkbox {
@@ -131,12 +165,21 @@
       line-height: 160%;
       color: var(--color-gray);
     }
+
+    @include minidesk {
+      margin-right: 0;
+    }
   }
 
   &__btn {
     height: 52px;
     padding-left: 41px;
     padding-right: 41px;
+
+    @include mobile {
+      width: 100%;
+      margin-top: 25px;
+    }
   }
 
   .choices {
@@ -200,6 +243,10 @@
 
   .choices__list--dropdown {
     background-color: var(--color-athens);
+  }
+
+  @include mobile {
+    flex-direction: column;
   }
 }
 

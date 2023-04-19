@@ -8,6 +8,12 @@
     margin-bottom: 34px;
   }
 
+  &__content {
+    @include small-tablet {
+      display: block;
+    }
+  }
+
   &__slider-nav {
     transform: translate(12px, 4px);
   }
@@ -95,5 +101,13 @@
     &--active {
       color: var(--color-primary);
     }
+
+    @include tablet {
+      font-size: 22px;
+    }
+  }
+
+  @include small-tablet {
+    margin-bottom: 30px;
   }
 }

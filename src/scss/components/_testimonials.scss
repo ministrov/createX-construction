@@ -5,13 +5,16 @@
   background-color: var(--color-athens);
 
   &__container {
-
     display: flex;
     justify-content: space-between;
   }
 
   &__content {
     max-width: 612px;
+
+    @include tablet {
+      max-width: 100%;
+    }
   }
 
   &__image {
@@ -19,10 +22,28 @@
     z-index: 5;
     margin-bottom: -60px;
     border-radius: 4px;
+
+    @include minidesk {
+      width: 380px;
+      object-fit: cover;
+    }
+
+    @include tablet {
+      width: 300px;
+    }
+
+    @include small-tablet {
+      display: none;
+    }
   }
 
   &__title {
     margin-bottom: 60px;
+
+    @include mobile {
+      font-size: 20px;
+      line-height: 24px;
+    }
   }
 
   &__items {
@@ -34,6 +55,11 @@
     position: absolute;
     right: 0;
     bottom: 0;
+  }
+
+  @include small-tablet {
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 }
 

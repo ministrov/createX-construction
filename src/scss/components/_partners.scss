@@ -12,7 +12,19 @@
   &__list {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    gap: 102px;
+    column-gap: 102px;
+
+    @include minidesk {
+      column-gap: 30px;
+    }
+  }
+
+  &__item {
+    @include minidesk {
+      display: flex;
+      justify-content: center;
+      grid-column: 3 span;
+    }
   }
 
   &__link {
@@ -34,5 +46,20 @@
     .partners__list {
       row-gap: 40px;
     }
+
+    @include tablet {
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+
+    @include mobile {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+  }
+
+  @include mobile {
+    padding-top: 55px;
+    padding-bottom: 55px;
   }
 }

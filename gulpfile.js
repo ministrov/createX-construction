@@ -54,8 +54,8 @@ const paths = {
 let isProd = false; // dev by default
 
 const clean = () => {
-  return del([buildFolder])
-}
+  return del([buildFolder]);
+};
 
 //svg sprite
 const svgSprites = () => {
@@ -88,7 +88,7 @@ const svgSprites = () => {
       },
     }))
     .pipe(dest(paths.buildImgFolder));
-}
+};
 
 // scss styles
 const styles = () => {
@@ -169,7 +169,7 @@ const scripts = () => {
     })
     .pipe(dest(paths.buildJsFolder))
     .pipe(browserSync.stream());
-}
+};
 
 // scripts backend
 const scriptsBackend = () => {
@@ -209,12 +209,12 @@ const scriptsBackend = () => {
     })
     .pipe(dest(paths.buildJsFolder))
     .pipe(browserSync.stream());
-}
+};
 
 const resources = () => {
   return src(`${paths.resourcesFolder}/**`)
-    .pipe(dest(buildFolder))
-}
+    .pipe(dest(buildFolder));
+};
 
 const images = () => {
   return src([`${paths.srcImgFolder}/**/**.{jpg,jpeg,png,svg}`])
@@ -227,19 +227,19 @@ const images = () => {
         optimizationLevel: 2
       }),
     ])))
-    .pipe(dest(paths.buildImgFolder))
+    .pipe(dest(paths.buildImgFolder));
 };
 
 const webpImages = () => {
   return src([`${paths.srcImgFolder}/**/**.{jpg,jpeg,png}`])
     .pipe(webp())
-    .pipe(dest(paths.buildImgFolder))
+    .pipe(dest(paths.buildImgFolder));
 };
 
 const avifImages = () => {
   return src([`${paths.srcImgFolder}/**/**.{jpg,jpeg,png}`])
     .pipe(avif())
-    .pipe(dest(paths.buildImgFolder))
+    .pipe(dest(paths.buildImgFolder));
 };
 
 const htmlInclude = () => {
@@ -253,7 +253,7 @@ const htmlInclude = () => {
     }))
     .pipe(dest(buildFolder))
     .pipe(browserSync.stream());
-}
+};
 
 const watchFiles = () => {
   browserSync.init({
@@ -271,7 +271,7 @@ const watchFiles = () => {
   watch(`${paths.srcImgFolder}/**/**.{jpg,jpeg,png}`, webpImages);
   watch(`${paths.srcImgFolder}/**/**.{jpg,jpeg,png}`, avifImages);
   watch(paths.srcSvg, svgSprites);
-}
+};
 
 const cache = () => {
   return src(`${buildFolder}/**/*.{css,js,svg,png,jpg,jpeg,webp,avif,woff2}`, {
@@ -296,7 +296,7 @@ const rewrite = () => {
       manifest
     }))
     .pipe(dest(buildFolder));
-}
+};
 
 const htmlMinify = () => {
   return src(`${buildFolder}/**/*.html`)
@@ -304,7 +304,7 @@ const htmlMinify = () => {
       collapseWhitespace: true
     }))
     .pipe(dest(buildFolder));
-}
+};
 
 const zipFiles = (done) => {
   del.sync([`${buildFolder}/*.zip`]);
@@ -317,7 +317,7 @@ const zipFiles = (done) => {
     ))
     .pipe(zip(`${rootFolder}.zip`))
     .pipe(dest(buildFolder));
-}
+};
 
 const toProd = (done) => {
   isProd = true;
@@ -326,7 +326,7 @@ const toProd = (done) => {
 
 exports.default = series(clean, htmlInclude, scripts, styles, resources, images, webpImages, avifImages, svgSprites, watchFiles);
 
-exports.backend = series(clean, htmlInclude, scriptsBackend, stylesBackend, resources, images, webpImages, avifImages, svgSprites)
+exports.backend = series(clean, htmlInclude, scriptsBackend, stylesBackend, resources, images, webpImages, avifImages, svgSprites);
 
 exports.build = series(toProd, clean, htmlInclude, scripts, styles, resources, images, webpImages, avifImages, svgSprites, htmlMinify);
 
