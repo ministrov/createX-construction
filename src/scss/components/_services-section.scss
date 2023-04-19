@@ -22,15 +22,20 @@
   gap: var(--grid-gap);
 
   @include tablet {
-    grid-template-columns: repeat(2, 285px);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
   }
 
   @include small-tablet {
-    display: block;
+    grid-template-columns: repeat(1, 1fr);
   }
 
   &__item {
     &:not(:last-child) {
+      @include tablet {
+        margin-bottom: 15px;
+      }
+
       @include small-tablet {
         margin-bottom: 25px;
       }
@@ -138,5 +143,10 @@
     .services-item__title {
       color: var(--color-light);
     }
+  }
+
+  @include mobile {
+    padding-left: 0;
+    padding-right: 0;
   }
 }

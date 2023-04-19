@@ -229,6 +229,11 @@ a {
     text-align: center;
   }
 
+  @include tablet {
+    font-size: 32px;
+    line-height: 36px;
+  }
+
   @include mobile {
     font-size: 28px;
     line-height: 40px;

@@ -5,7 +5,6 @@
   background-color: var(--color-athens);
 
   &__container {
-
     display: flex;
     justify-content: space-between;
   }
@@ -14,10 +13,6 @@
     max-width: 612px;
 
     @include tablet {
-      max-width: 450px;
-    }
-
-    @include mobile {
       max-width: 100%;
     }
   }
