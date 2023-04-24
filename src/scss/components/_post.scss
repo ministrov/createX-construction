@@ -4,7 +4,6 @@
 
   &__image {
     width: 100%;
-    margin-top: -79px;
     object-fit: cover;
   }
 
@@ -89,6 +88,11 @@
         background-size: cover;
         background-repeat: no-repeat;
       }
+
+      @include mobile {
+        padding: 0;
+        padding-top: 42px;
+      }
     }
 
     ul {
@@ -119,5 +123,9 @@
         }
       }
     }
+  }
+
+  @include small-tablet {
+    padding-bottom: 80px;
   }
 }

@@ -16,6 +16,11 @@
     // display: flex;
     // justify-content: space-between;
     // flex-wrap: wrap;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      column-gap: 15px;
+    }
   }
 
   .form-field__caption {
@@ -41,6 +46,15 @@
     &--big {
       margin-bottom: 46px;
       // width: 100%;
+
+      @include mobile {
+        margin-top: 0;
+      }
+    }
+
+    @include mobile {
+      width: 100%;
+      margin-bottom: 20px;
     }
   }
 }
