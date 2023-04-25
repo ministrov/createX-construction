@@ -39,14 +39,26 @@
   --gap: 20px;
   @include flex-v-center;
 
+  @include tablet {
+    @include flex-column-center;
+  }
+
   margin-bottom: 61px;
   transform: translateY(-60px);
 
   &__item {
     width: calc((100% - (var(--gap) * 4)) / 5);
 
+    @include tablet {
+      width: 100%;
+    }
+
     &:not(:last-child) {
       margin-right: var(--gap);
+
+      @include tablet {
+        margin-bottom: 15px;
+      }
     }
   }
 

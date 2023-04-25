@@ -23,6 +23,15 @@
     font-size: 20px;
     line-height: 150%;
     color: var(--color-ebony);
+
+    @include tablet {
+      font-size: 18px;
+    }
+
+    @include small-tablet {
+      min-height: 25px;
+      font-size: 14px;
+    }
   }
 
   &__description {

@@ -17,6 +17,10 @@
   background-color: var(--color-light);
   border: 1px solid #E5E8ED;
   box-shadow: var(--main-shadow);
+
+  @include tablet {
+    overflow-x: auto;
+  }
 }
 
 .table {
@@ -93,11 +97,6 @@
     vertical-align: middle;
     text-align: center;
 
-    &:first-child {
-      padding-left: 24px;
-      text-align: left;
-    }
-
     .btn {
       padding-top: 0;
       padding-bottom: 0;
@@ -109,6 +108,21 @@
       text-align: center;
       letter-spacing: 0.5px;
       text-transform: uppercase;
+
+      &:focus {
+        outline: 2px solid var(--color-primary);
+        outline-offset: 2px;
+      }
+
+      @include small-tablet {
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+    }
+
+    &:first-child {
+      padding-left: 24px;
+      text-align: left;
     }
   }
 
@@ -122,5 +136,9 @@
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+  }
+
+  @include tablet {
+    width: 1200px;
   }
 }

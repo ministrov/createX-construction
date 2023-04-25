@@ -41,7 +41,15 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+
+        @include small-tablet {
+          display: none;
+        }
       }
+    }
+
+    @include small-tablet {
+      grid-column: 6 span;
     }
   }
 
@@ -60,5 +68,9 @@
     font-size: 16px;
     line-height: 160%;
     color: var(--color-storm);
+  }
+
+  @include small-tablet {
+    padding-bottom: 60px;
   }
 }
