@@ -33,6 +33,10 @@
       color: var(--color-active);
     }
   }
+
+  @include mobile {
+    padding-top: 80px;
+  }
 }
 
 .portfolio-tabs-nav {
@@ -57,6 +61,7 @@
       margin-right: var(--gap);
 
       @include tablet {
+        margin-right: 0;
         margin-bottom: 15px;
       }
     }
@@ -121,5 +126,13 @@
 
   &__item {
     grid-column: 4 span;
+
+    @include tablet {
+      grid-column: 6 span;
+    }
+
+    @include small-tablet {
+      grid-column: 12 span;
+    }
   }
 }

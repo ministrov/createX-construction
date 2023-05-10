@@ -142,9 +142,17 @@ const workImages = document.querySelector('.portfolio-images-slider');
 if (workImages) {
   const workSlider = new Swiper(".portfolio-images-nav", {
     spaceBetween: 20,
-    slidesPerView: 10,
+    slidesPerView: 3,
     freeMode: true,
     watchSlidesProgress: true,
+    breakpoints: {
+      576: {
+        slidesPerView: 6
+      },
+      768: {
+        slidesPerView: 10,
+      }
+    }
   });
 
   const workSliderNav = new Swiper(workImages, {
