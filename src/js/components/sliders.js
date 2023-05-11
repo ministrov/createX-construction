@@ -70,11 +70,10 @@ if (portSlider) {
 
 if (relatedSlider) {
   const relatedProjSlider = new Swiper(relatedSlider, {
-    slidesPerView: 3,
+    slidesPerView: 1,
     spaceBetween: gap,
     on: {
       init: function () {
-
         const activeSlide = relatedSlider.querySelector('.swiper-slide-active');
 
         const nextActiveSlide = activeSlide.nextElementSibling;
@@ -82,9 +81,7 @@ if (relatedSlider) {
         const nextNextActiveSlide = nextActiveSlide.nextElementSibling;
 
         activeSlide.classList.add('slider-visible');
-
         nextActiveSlide.classList.add('slider-visible');
-
         nextNextActiveSlide.classList.add('slider-visible');
       },
     },
@@ -92,14 +89,18 @@ if (relatedSlider) {
       nextEl: '.related-projects__next',
       prevEl: '.related-projects__prev'
     },
+    breakpoints: {
+      576: {
+        slidesPerView: 2
+      },
+      768: {
+        slidesPerView: 3,
+      }
+    }
   });
 
   document.querySelector('.related-projects__prev').addEventListener('click', () => {
     const activeSlide = relatedSlider.querySelector('.swiper-slide-next');
-
-    document.querySelectorAll('.related-projects__items .swiper-slide').forEach(el => {
-      el.classList.remove('slider-visible');
-    });
 
     if (activeSlide.previousElementSibling) {
       const nextActiveSlide = activeSlide.previousElementSibling;
@@ -141,9 +142,17 @@ const workImages = document.querySelector('.portfolio-images-slider');
 if (workImages) {
   const workSlider = new Swiper(".portfolio-images-nav", {
     spaceBetween: 20,
-    slidesPerView: 10,
+    slidesPerView: 3,
     freeMode: true,
     watchSlidesProgress: true,
+    breakpoints: {
+      576: {
+        slidesPerView: 6
+      },
+      768: {
+        slidesPerView: 10,
+      }
+    }
   });
 
   const workSliderNav = new Swiper(workImages, {

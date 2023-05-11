@@ -15,7 +15,7 @@ html {
 
 .page__body {
   margin: 0;
-  min-width: 320px;
+  // min-width: 320px;
   font-family: var(--font-family, sans-serif);
   font-size: 16px;
   font-weight: 400;
@@ -118,6 +118,16 @@ a {
     line-height: 45px;
   }
 }
+
+.dis-scroll {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
 
 .main-description {
   margin: 0;
@@ -654,4 +664,37 @@ a {
 
 .burger:focus::after {
   opacity: 1;
+}
+
+.overlay {
+  position: fixed;
+  z-index: 500;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(#000, 0.6);
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out ;
+
+  &--active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.modal {
+  @include mobile {
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.site-modal {
+  @include mobile {
+    width: 90%;
+    padding: 20px;
+    padding-top: 40px;
+  }
 }

@@ -14,7 +14,28 @@
     }
 
     @include tablet {
-      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      display: block;
+      overflow-y: auto;
+      width: 80%;
+      height: 100vh;
+      padding: 50px;
+      background-color: var(--color-light);
+      transform: translateX(-150%);
+      transition: transform 0.3s ease-in-out;
+
+      &--active {
+        transform: none;
+      }
+    }
+
+    @include mobile {
+      padding: 20px;
     }
   }
 

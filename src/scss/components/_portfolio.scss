@@ -33,11 +33,19 @@
       color: var(--color-active);
     }
   }
+
+  @include mobile {
+    padding-top: 80px;
+  }
 }
 
 .portfolio-tabs-nav {
   --gap: 20px;
   @include flex-v-center;
+
+  @include tablet {
+    @include flex-column-center;
+  }
 
   margin-bottom: 61px;
   transform: translateY(-60px);
@@ -45,8 +53,17 @@
   &__item {
     width: calc((100% - (var(--gap) * 4)) / 5);
 
+    @include tablet {
+      width: 100%;
+    }
+
     &:not(:last-child) {
       margin-right: var(--gap);
+
+      @include tablet {
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
     }
   }
 
@@ -109,5 +126,13 @@
 
   &__item {
     grid-column: 4 span;
+
+    @include tablet {
+      grid-column: 6 span;
+    }
+
+    @include small-tablet {
+      grid-column: 12 span;
+    }
   }
 }

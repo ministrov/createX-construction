@@ -14,16 +14,25 @@
     grid-template-columns: repeat(6, 1fr);
     column-gap: 102px;
 
-    @include minidesk {
+    @include tablet {
       column-gap: 30px;
+    }
+
+    @include small-tablet {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 15px;
     }
   }
 
   &__item {
-    @include minidesk {
+    @include tablet {
       display: flex;
       justify-content: center;
-      grid-column: 3 span;
+      grid-column: 2 span;
+    }
+
+    @include small-tablet {
+      grid-column: 1 span;
     }
   }
 

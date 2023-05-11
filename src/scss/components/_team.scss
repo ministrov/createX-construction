@@ -22,6 +22,11 @@
     @include tablet {
       grid-column: 6 span;
     }
+
+    @include small-tablet {
+      display: grid;
+      justify-items: center;
+    }
   }
 
   &__top {
@@ -29,8 +34,8 @@
     margin-bottom: 12px;
     font-size: 0;
 
-    @include tablet {
-      text-align: center;
+    @include small-tablet {
+      width: 285px;
     }
   }
 

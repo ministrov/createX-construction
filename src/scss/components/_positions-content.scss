@@ -10,6 +10,10 @@
   &__right {
     grid-column: 5 span;
   }
+
+  @include small-tablet {
+    padding-top: 45px;
+  }
 }
 
 .positions-list {
@@ -31,6 +35,12 @@
   background-color: var(--color-light);
   border: 1px solid #E5E8ED;
   border-radius: 4px;
+
+  &__left {
+    @include tablet {
+      margin-bottom: 20px;
+    }
+  }
 
   &__meta {
     margin-bottom: 8px;
@@ -103,6 +113,11 @@
       background-color: var(--color-active);
     }
   }
+
+  @include tablet {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 .positions-looking {
@@ -123,6 +138,14 @@
     font-size: 18px;
     line-height: 150%;
     color: var(--color-gray);
+  }
+
+  &__btns {
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
   }
 
   &__btn {
@@ -147,6 +170,10 @@
         background-color: var(--color-active);
         border-color: transparent;
       }
+
+      @include tablet {
+        margin-right: 0;
+      }
     }
 
     &--send {
@@ -170,5 +197,9 @@
         border-color: var(--color-active);
       }
     }
+  }
+
+  @include tablet {
+    width: 100%;
   }
 }

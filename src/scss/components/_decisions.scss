@@ -3,6 +3,12 @@
   padding-bottom: 80px;
   background-color: #f4f5f7;
 
+  .grid {
+    @include tablet {
+      display: block;
+    }
+  }
+
   &__title {
     margin-bottom: 62px;
   }
@@ -39,11 +45,21 @@
     img {
       margin-bottom: -142px;
       border-radius: 4px;
+
+      @include tablet {
+        max-width: 100%;
+        margin-bottom: 0;
+      }
     }
   }
 
   &__info {
     grid-column: 7 span;
     padding-left: 104px;
+
+    @include tablet {
+      padding-top: 30px;
+      padding-left: 0;
+    }
   }
 }

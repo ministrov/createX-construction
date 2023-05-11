@@ -48,7 +48,7 @@
   }
 
   &__image {
-    @include minidesk {
+    @include tablet {
       max-width: 45%;
     }
 
@@ -103,13 +103,13 @@
     box-shadow: var(--main-shadow);
     border-radius: 4px;
 
-    @include minidesk {
+    @include tablet {
       left: 0;
       top: 0;
       width: 55%;
     }
 
-    @include tablet {
+    @include small-tablet {
       width: 100%;
     }
 
