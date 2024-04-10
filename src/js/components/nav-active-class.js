@@ -3,8 +3,9 @@ import { Flip } from "gsap/Flip";
 
 gsap.registerPlugin(Flip);
 
+const item = document.querySelector('.nav__item');
 const navLinks = document.querySelectorAll('.nav__item-link');
-const activeNav = document.querySelector('.nav__active');
+// const activeNav = document.querySelector('.nav__active');
 const windowPathname = window.location.pathname;
 
 navLinks.forEach(link => {
@@ -15,12 +16,11 @@ navLinks.forEach(link => {
     link.classList.add('nav__item-link--current');
 
     // Wanna mo line to
-    // if (windowPathname === '/index.html') {
-    //   link.removeChild(activeNav);
-    // }
+    const active = document.createElement('div');
+    active.className = 'nav__active';
 
-    const state = Flip.getState(activeNav);
-    link.appendChild(activeNav);
+    const state = Flip.getState(active);
+    link.parentElement.appendChild(active);
     Flip.from(state, {
       duration: 0.8,
       absolute: true
@@ -29,6 +29,6 @@ navLinks.forEach(link => {
 });
 
 // console.log(window.location);
-console.log(activeNav);
+// console.log(activeNav);
 console.log(gsap);
 // console.log(gsap.registarPlugin(Flip));
