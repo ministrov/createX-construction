@@ -1,0 +1,45 @@
+.footer-address {
+  padding-top: 20px;
+
+  &__title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--color-light);
+  }
+
+  &__item {
+    display: block;
+    font-size: 16px;
+    line-height: 160%;
+
+    &:not(:last-child) {
+      margin-right: 4px;
+    }
+
+    a {
+      color: inherit;
+      transition: color 0.3s ease-in-out;
+
+      &:focus {
+        outline: 2px solid var(--color-primary);
+        outline-offset: 6px;
+      }
+
+      &:hover {
+        color: var(--color-light);
+      }
+
+      &:active {
+        color: var(--color-light);
+      }
+    }
+  }
+
+  &__name {
+    color: var(--color-light);
+  }
+}
