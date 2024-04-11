@@ -1,6 +1,5 @@
 const videoBlock = document.querySelector('.video-block');
 
-
 if (videoBlock) {
   const video = videoBlock.querySelector('video');
   const playBtn = videoBlock.querySelector('.video-block__play');
@@ -17,6 +16,5 @@ if (videoBlock) {
     video.controls = false;
     playBtn.classList.remove('video-block__play--played');
   };
-
 }
 

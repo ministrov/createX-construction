@@ -107,22 +107,27 @@
     bottom: 80px;
     z-index: 1000;
 
-    @include big-desktop {
+    @media (max-width: 1668px) {
       right: 20px;
       bottom: 20px;
     }
+
+    // @include big-desktop {
+    //   right: 20px;
+    //   bottom: 20px;
+    // }
   }
 }
 
-.footer-title {
-  margin: 0;
-  margin-bottom: 15px;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 150%;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: var(--color-light);
-}
+// .footer-title {
+//   margin: 0;
+//   margin-bottom: 15px;
+//   font-style: normal;
+//   font-weight: 700;
+//   font-size: 16px;
+//   line-height: 150%;
+//   letter-spacing: 1px;
+//   text-transform: uppercase;
+//   color: var(--color-light);
+// }
 
