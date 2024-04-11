@@ -4,8 +4,10 @@
     gap: 40px;
 
     @include tablet {
-      display: block;
-      margin-bottom: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 45px;
     }
   }
 
@@ -15,8 +17,6 @@
 
   &__item {
     &:not(:last-child) {
-      // margin-right: 40px;
-
       @include tablet {
         margin-right: 0;
         margin-bottom: 30px;
@@ -55,6 +55,10 @@
 
     &--current {
       color: var(--color-primary);
+    }
+
+    @include tablet {
+      font-size: 18px;
     }
   }
 }

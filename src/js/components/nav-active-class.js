@@ -15,12 +15,14 @@ navLinks.forEach(link => {
   if (windowPathname === navLinkPathname) {
     link.classList.add('nav__item-link--current');
 
-    // Wanna mo line to
+    // Wanna move line to
     const active = document.createElement('div');
     active.className = 'nav__active';
 
     const state = Flip.getState(active);
+    // console.log(state);
     link.parentElement.appendChild(active);
+    console.log(active);
     Flip.from(state, {
       duration: 0.8,
       absolute: true

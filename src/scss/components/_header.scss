@@ -24,19 +24,23 @@
       overflow-y: auto;
       width: 80%;
       height: 100vh;
-      padding: 50px;
+      padding-top: 50px;
       background-color: var(--color-light);
       transform: translateX(-150%);
       transition: transform 0.3s ease-in-out;
 
       &--active {
         transform: none;
+
+        .nav__active {
+          display: none;
+        }
       }
     }
 
-    @include mobile {
-      padding: 20px;
-    }
+    // @include mobile {
+    //   padding: 20px;
+    // }
   }
 
   &--transparent {
