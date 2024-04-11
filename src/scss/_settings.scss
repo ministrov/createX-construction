@@ -405,26 +405,19 @@ a {
   grid-template-columns: repeat(12, 1fr);
   gap: var(--grid-gap);
 
-  @include mobile {
+  // @include tablet {
+  //   grid-template-columns: repeat(2, minmax(auto, auto));
+  // }
+
+  @include tablet {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
 .scroll-up {
-  display: grid;
-  grid-template-columns: auto 40px;
-  column-gap: 15px;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-
-  &__text {
-    align-self: end;
-    font-size: 14px;
-    line-height: 150%;
-    text-transform: uppercase;
-    color: var(--color-light);
-  }
 
   &__link {
     display: flex;

@@ -5,32 +5,22 @@ gsap.registerPlugin(Flip);
 
 const item = document.querySelector('.nav__item');
 const navLinks = document.querySelectorAll('.nav__item-link');
-// const activeNav = document.querySelector('.nav__active');
 const windowPathname = window.location.pathname;
 
 navLinks.forEach(link => {
   const navLinkPathname = new URL(link.href).pathname;
 
-  // console.log(navLinkPathname);
   if (windowPathname === navLinkPathname) {
     link.classList.add('nav__item-link--current');
 
-    // Wanna move line to
     const active = document.createElement('div');
     active.className = 'nav__active';
 
     const state = Flip.getState(active);
-    // console.log(state);
     link.parentElement.appendChild(active);
-    console.log(active);
     Flip.from(state, {
       duration: 0.8,
       absolute: true
     });
   }
 });
-
-// console.log(window.location);
-// console.log(activeNav);
-console.log(gsap);
-// console.log(gsap.registarPlugin(Flip));

@@ -4,9 +4,13 @@
   background-color: var(--color-light);
 
   &__list {
-    row-gap: 64px;
-    column-gap: var(--grid-gap);
-    margin-bottom: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    @media (max-width: 1294px) {
+      justify-content: center;
+    }
   }
 
   &__item {
@@ -17,15 +21,6 @@
         opacity: 1;
         visibility: visible;
       }
-    }
-
-    @include tablet {
-      grid-column: 6 span;
-    }
-
-    @include small-tablet {
-      display: grid;
-      justify-items: center;
     }
   }
 

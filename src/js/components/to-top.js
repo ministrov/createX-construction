@@ -4,8 +4,6 @@ const scroll = new SmoothScroll('.scroll-up');
 const toTop = document.querySelector('.scroll-up');
 let heroHeight;
 
-// console.log(scroll);
-
 if (document.querySelector('.hero')) {
   heroHeight = document.querySelector('.hero').offsetHeight;
 }
