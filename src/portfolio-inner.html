@@ -1,35 +1,53 @@
 <!DOCTYPE html>
 <html lang="en" class="page">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="theme-color" content="#111111" />
+    <link
+      rel="prefetch"
+      href="fonts/LatoBlack.woff2"
+      as="font"
+      type="font/woff2"
+    />
+    <link
+      rel="prefetch"
+      href="fonts/LatoBold.woff2"
+      as="font"
+      type="font/woff2"
+    />
+    <link
+      rel="prefetch"
+      href="fonts/UbuntuBold.woff2"
+      as="font"
+      type="font/woff2"
+    />
+    <link
+      rel="prefetch"
+      href="fonts/UbuntuRegular.woff2"
+      as="font"
+      type="font/woff2"
+    />
+    <link rel="stylesheet" href="css/vendor.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Cratex Construction</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="theme-color" content="#111111">
-  <link rel="prefetch" href="fonts/LatoBlack.woff2" as="font" type="font/woff2">
-  <link rel="prefetch" href="fonts/LatoBold.woff2" as="font" type="font/woff2">
-  <link rel="prefetch" href="fonts/UbuntuBold.woff2" as="font" type="font/woff2">
-  <link rel="prefetch" href="fonts/UbuntuRegular.woff2" as="font" type="font/woff2">
-  <link rel="stylesheet" href="css/vendor.css">
-  <link rel="stylesheet" href="css/main.css">
-  <title>Cratex Construction</title>
-</head>
+  <body class="page__body">
+    <div class="page__site-container site-container">
+      @include('partials/header-1.html')
+      <main class="page__main main">
+        @include('partials/hero-portfolio-inner.html')
+        @include('partials/project-goal.html')
+        @include('partials/decisions.html')
+        @include('partials/related-projects.html')
+        @include('partials/request-section.html')
+      </main>
+      @include('partials/footer.html')
+    </div>
 
-<body class="page__body">
-  <div class="page__site-container site-container">
-    @include('partials/header-1.html')
-    <main class="page__main main">
-      @include('partials/hero-portfolio-inner.html')
-      @include('partials/project-goal.html')
-      @include('partials/decisions.html')
-      @include('partials/related-projects.html')
-      @include('partials/request-section.html')
-    </main>
-    @include('partials/footer.html')
-  </div>
-
-  <script src="js/main.js"></script>
-</body>
-
+    <script src="js/main.js"></script>
+  </body>
 </html>
